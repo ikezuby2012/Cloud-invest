@@ -1,0 +1,120 @@
+// footer 
+.footer {
+    position: relative;
+    padding: 7rem 2rem;
+    // background-color: #343434;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    &-div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+        &>* {
+            &:not(:last-child){margin-right: 20px;}
+        }
+    }
+    
+    &-desc_box {
+
+        &>h3 {
+            color: var(--dark-text);
+            font-size: x-large;
+            text-transform: capitalize;
+            margin-bottom: .5rem;
+        }
+        &>p {
+            font-size: 1.4rem;
+            color: var(--grey-dark-1);
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+        }
+    }
+    &-box-headtd {
+        color: var(--dark-text);
+        font-size: 1.9rem;
+        text-transform: capitalize;
+        margin-bottom: .9rem;
+        font-weight: 600;
+    }
+    &-list {
+        list-style: none;
+        &>* {
+            margin-bottom: 8px;
+        }
+    }
+    &-link {
+        font-size: $font-variable;
+        color: var(--grey-dark-1);
+        text-transform: capitalize;
+        &:link,
+        &:active {
+            text-decoration: none;
+        }
+    }
+    &-subscribe {
+        &-text {
+            color: var(--dark-text);
+            font-size: 2.3rem;
+            text-transform: capitalize;
+            margin-bottom: .9rem;
+            font-weight: 600;
+        }
+        &-div {
+            margin: 1rem 0;
+        }
+        &-input {
+            font-family: inherit;
+            font-size: inherit;
+            color: inherit;
+            background-color: rgb(238, 235, 235);
+            border: none;
+            box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
+            padding: .7rem 2rem;
+            border-radius: 10px;
+            //width: 50%;
+            transition: all .2s;
+
+            &:focus {
+                outline: none;
+                width: 100%;
+                background-color: var(--grey-light-2);
+                box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
+              }
+              &::-webkit-input-placeholder {
+                font-weight: 400;
+                color: var(--grey-dark-3);
+                font-style: italic;
+              }
+        }
+        &-button {
+            background-color: var(--color-grey-light-1);
+            color: var(--grey-dark-1);
+            border: none;
+            border-radius: 0;
+            font-family: "josefin sans", Sans-serif;
+            font-size: $font-variable;
+            text-transform: uppercase;
+            padding: 1.2rem 1.8rem;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover {
+                background-color: var(--color-grey-light-2);
+                color: var(--grey-dark-1);
+            }
+        }
+    }
+    &-copyright {
+        text-align: center;
+        margin: 3rem 0 -6rem 0;
+        
+
+        &>p {
+            color: var(--dark-text);
+            font-size: 1.4rem;
+        }
+    }
+}
